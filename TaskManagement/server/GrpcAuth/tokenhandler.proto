@@ -1,0 +1,13 @@
+syntax = "proto3";
+package observer;
+
+message req {
+    string token=1;
+}
+
+message res {
+    string id = 1;
+}
+service DecodeToken {
+  rpc DecodeTokenGrpc (req) returns (res) {}
+}
